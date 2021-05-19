@@ -1,0 +1,41 @@
+@tailwind base;
+
+@tailwind components;
+.sm-circle {
+    @apply h-32 w-32;
+}
+
+.md-circle {
+    @apply h-44 w-44;
+}
+
+.lg-circle {
+    @apply h-52 w-52;
+}
+
+@tailwind utilities;
+
+.gradiente {
+    background-color: #283acb;
+    background-image: linear-gradient(135deg, #283acb 0%, #8650c8 50%, #de0a0a 100%);
+    background-repeat: no-repeat;
+}
+
+.glassmorphism-effect {
+    background: rgba( 255, 255, 255, 0.10 );
+    box-shadow: 08px32px0rgba( 31, 38, 135, 0.37 );
+    -webkit-backdrop-filter: blur( 10px );
+            backdrop-filter: blur( 10px );
+    border-radius: 16px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -9999;
+}
+
+body {
+    min-height: 100vh;
+}
