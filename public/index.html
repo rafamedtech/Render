@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Render</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 </head>
 <body class="gradiente">
-    <div class="md:h-96 relative">
-        <header class=" relative container mx-auto glassmorphism-effect w-11/12 my-4  md:p-4 lg:min-h-full">
-            <a href="/"><img class="w-7/12 ml-4 mt-4 md:w-4/12 lg:w-2/12" src="/images/logos/RENDER-ROSA_20.png" alt=""></a>
-            <nav class="render">
-                <ul class="hidden">
+    <header class="relative w-11/12 mx-auto my-4">
+        <div class="my-4 glassmorphism-effect ">
+            <a href="/"><img class="w-7/12 ml-4 mt-4 md:w-3/12 lg:w-2/12" src="/images/logos/RENDER-ROSA_20.png" alt=""></a>
+            <nav class="hidden">
+                <ul class="flex">
                     <li>Nosostros</li>
-                    <li>Servicios</li>
                     <li>Portfolio</li>
                     <li>Equipo</li>
                     <li>Contacto</li>
@@ -25,16 +25,74 @@
                     <img class="drop-shadow-lg mx-auto" src="/images/logos/test2.png" alt="">
                 </figure>
                 <div class="mb-4">
-                    <h2 class="text-white text-3xl m-8 font-semibold lg:text-4xl">Crece tu presencia en internet y conecta con tus potenciales clientes</h2>
-                    <button class="glassmorphism-effect py-2 px-4 ml-8 my-4 text-white lg:px-6 lg:py4">Contactanos</button>
+                    <h2 class="text-white text-3xl m-8 font-semibold lg:text-5xl tracking-wider">Crece tu presencia en internet y conecta con tus potenciales clientes</h2>
+                    <button class="glassmorphism-effect py-2 px-4 ml-8 my-4 text-white lg:px-6 lg:py4 lg:mb-16">Contactanos</button>
                 </div>
             </div>
+        </div>
+        <div class="circle lg-circle -top-16 -left-16"></div>
+        <div class="circle md-circle top-32 -right-0"></div>
+        <div class="circle sm-circle bottom-8 right-16 md:right-96 lg:left-96"></div>
+        <div class="circle sm-circle bottom-8 right-16 md:right-72 md:top-1 lg:-bottom-32 lg:left-1/2"></div>
+    </header>
+    <main class="w-11/12 mx-auto">
+        <section class="md:grid md:grid-cols-2">
+            <div class="md:flex md:flex-col md:justify-center">
+                <figure class="">
+                    <img class="mx-auto md:w-1/2" src="/images/logos/value.png" alt="">
+                </figure>
+                <h3 class="text-white text-3xl m-8 text-center lg:mt-0 lg:text-5xl">Ideas bien pensadas para un buen crecimiento</h3>
+            </div>
+            <div class="lg:flex flex-col justify-evenly">
+                <div class="glassmorphism-effect m-2 p-4 flex items-center lg:justify-around">
+                    <i class="fab fa-searchengin text-white text-6xl"></i>
+                    <div class="text-right">
+                        <h4 class="text-xl text-gray-700">Optimizacion para motores de busqueda</h4>
+                        <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="glassmorphism-effect m-2 p-4 flex items-center lg:justify-around">
+                    <i class="fas fa-users text-white text-6xl"></i>
+                    <div class="text-right">
+                        <h4 class="text-xl text-gray-700">Marketing para Redes Sociales</h4>
+                        <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="glassmorphism-effect m-2 p-4 flex items-center lg:justify-around">
+                    <i class="far fa-envelope-open text-white text-6xl"></i>
+                    <div class="text-right text-white">
+                        <h4 class="text-xl text-gray-700">Email Marketing</h4>
+                        <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="my-4 p-4 glassmorphism-effect md:flex md:flex-row-reverse lg:justify-around lg:items-center">
+            <figure class="mx-4 my-4">
+                <img class="mx-auto lg:w-80" src="/images/logos/Information image.png" alt="">
+            </figure>
+            <div class="mx-4 md:w-1/2">
+                <h3 class="text-white text-3xl my-8 lg:mt-0 lg:text-5xl lg:leading-normal">Estrategias digitales para Negocios del mundo Real</h3>
+                <p class="text-gray-200 text-lg">Algunos estudios indican que las respuestas a estrategias tradicionales de marketing se ha vuelto menos predecible para los negocios.</p><br>
+                <p class="text-gray-200 text-lg">Un objetivo clave del marketing digital moderno es tener presencia de marca.</p>
+            </div>
+        </section>
+        <section class="w-11/12 mx-auto">
+            <h3 class="text-white text-3xl text-center my-8 lg:mt-0 lg:text-5xl">NUESTRA HISTORIA</h3>
+            <div class="md:flex md:flex-col">
+                <div class="md:w-1/2">
+                    <h4 class="text-2xl text-gray-700 text-center mb-2">Hacer la diferencia</h4>
+                    <div class="w-1/3 border border-white mx-auto"></div>
+                    <p class="my-8 text-gray-200">El equipo se inicia como un proyecto a cargo de 4 jóvenes sonorenses, orgullosamente Guaymenses, con el afán de emprender y proponer algo diferente a lo que actualmente hay en la región.</p>
+                </div>
+                <div class="md:w-1/2 md:self-end">
+                    <h4 class="text-2xl text-gray-700 text-center mb-2">Ideas innovadoras</h4>
+                    <div class="w-1/3 border border-white mx-auto"></div>
+                    <p class="my-8 text-gray-200">Cada uno de los integrantes y personas que laboran con nosotros, desempeñamos diferentes áreas, no solo de la comunicación o el Marketing, también en tecnología y la educación, logrando con esto una mejor perspectiva e ideas para nuestros clientes.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        </header>
-            <div class="gradiente circle lg-circle -top-16 -left-16"></div>
-            <div class="gradiente circle md-circle top-2 -right-0"></div>
-            <div class="gradiente circle sm-circle bottom-8 right-16 md:right-96 lg:-bottom-32 lg:left-96"></div>
-            <div class="gradiente circle sm-circle bottom-8 right-16 md:right-72 md:top-1 lg:-bottom-32 lg:left-1/2"></div>
-    </div>
 </body>
 </html>
