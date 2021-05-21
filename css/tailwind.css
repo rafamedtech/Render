@@ -13,6 +13,14 @@
     @apply h-52 w-52;
 }
 
+label {
+    @apply text-white my-4;
+}
+
+input {
+    height: 50px;
+}
+
 @tailwind utilities;
 
 .gradiente {
