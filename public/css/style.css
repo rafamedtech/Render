@@ -31916,7 +31916,7 @@ input::-webkit-inner-spin-button {
     #283acb 100%
   );
   width: 60%;
-  max-width: 480px;
+  max-width: 360px;
   min-width: 320;
   transition-delay: 0.4s;
 }
