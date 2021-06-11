@@ -5,11 +5,14 @@ const nav = document.querySelectorAll(".nav");
 open_btn.addEventListener("click", () => {
   nav.forEach((nav_el) => {
     nav_el.classList.add("visible");
+    open_btn.style.opacity = 0;
   });
 });
 
 close_btn.addEventListener("click", () => {
   nav.forEach((nav_el) => {
     nav_el.classList.remove("visible");
+    open_btn.style.opacity = 1;
+    nav.style.display = "none";
   });
 });
