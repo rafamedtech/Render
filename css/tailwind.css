@@ -160,10 +160,6 @@ input::-webkit-inner-spin-button {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.nav-main.visible {
-  /* transition-delay: 0.4s; */
-}
-
 .close-btn {
   opacity: 0.3;
   position: absolute;
