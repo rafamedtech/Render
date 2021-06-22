@@ -3,25 +3,22 @@ const close_btn = document.querySelector(".close-btn");
 const nav = document.querySelectorAll(".nav");
 const links = document.querySelectorAll(".list li a");
 
-open_btn.addEventListener("click", () => {
-  console.log("click");
+const openNav = () => {
   nav.forEach((nav_el) => {
-    // nav_el.classList.add("visible");
     nav_el.style.transform = "translateX(0)";
-    open_btn.style.opacity = 0;
-  });
-});
-
-const closeNav = () => {
-  nav.forEach((nav_el) => {
-    nav_el.classList.remove("visible");
-    open_btn.style.opacity = 1;
-    nav.style.display = "none";
   });
 };
 
-close_btn.addEventListener("click", closeNav);
+const closeNav = () => {
+  nav.forEach((nav_el) => {
+    nav_el.style.transform = "translateX(400%)";
+    open_btn.style.opacity = 1;
+  });
+};
 
 links.forEach((link) => {
   link.addEventListener("click", closeNav);
 });
+
+open_btn.addEventListener("click", openNav);
+close_btn.addEventListener("click", closeNav);
