@@ -41,6 +41,7 @@ textarea:focus {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease;
 }
 
 .glassmorphism-inverted {
@@ -51,14 +52,22 @@ textarea:focus {
   position: absolute;
   border-radius: 50%;
   z-index: -9999;
-  background-color: #283acb;
+  /* background-color: #283acb;
   background-image: linear-gradient(
     135deg,
     #283acb 0%,
     #8650c8 50%,
-    #de0a0a 100%
-  );
+    #98103b 100%
+  ); */
   background-repeat: no-repeat;
+  background-color: #9541d0;
+  background-image: linear-gradient(
+    78deg,
+    #9541d0 0%,
+    #3b1fe0 30%,
+    #d20b14 66%,
+    #ea05f0 100%
+  );
 }
 
 html {
