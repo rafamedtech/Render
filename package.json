@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "postcss css/tailwind.css -o public/css/style.css",
-    "dev": "postcss css/tailwind.css -o public/css/style.css --watch"
+    "dev": "postcss css/tailwind.css -o public/css/style.css --watch",
+    "jit": "npx css/tailwindcss -o ./public/css/style.css --jit --purge './**/*.html"
   },
   "repository": {
     "type": "git",

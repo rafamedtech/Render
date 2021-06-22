@@ -4,8 +4,10 @@ const nav = document.querySelectorAll(".nav");
 const links = document.querySelectorAll(".list li a");
 
 open_btn.addEventListener("click", () => {
+  console.log("click");
   nav.forEach((nav_el) => {
-    nav_el.classList.add("visible");
+    // nav_el.classList.add("visible");
+    nav_el.style.transform = "translateX(0)";
     open_btn.style.opacity = 0;
   });
 });
