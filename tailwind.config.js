@@ -9,7 +9,11 @@ module.exports = {
     color: {
       render: "#283acb",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        bavro: ["bavro"],
+      },
+    },
   },
   variants: {
     extend: {},

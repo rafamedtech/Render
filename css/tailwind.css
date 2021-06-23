@@ -2,6 +2,13 @@
 
 @tailwind components;
 
+@font-face {
+  font-family: "bavro";
+  src: url("/public/fonts/bavro/bavro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 label {
   @apply text-white my-4;
 }
@@ -41,33 +48,10 @@ textarea:focus {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  transition: all 0.3s ease;
 }
 
 .glassmorphism-inverted {
   box-shadow: inset 0 8px 32px 0 rgba(255, 255, 255, 0.1);
-}
-
-.circle {
-  position: absolute;
-  border-radius: 50%;
-  z-index: -9999;
-  /* background-color: #283acb;
-  background-image: linear-gradient(
-    135deg,
-    #283acb 0%,
-    #8650c8 50%,
-    #98103b 100%
-  ); */
-  background-repeat: no-repeat;
-  background-color: #9541d0;
-  background-image: linear-gradient(
-    78deg,
-    #9541d0 0%,
-    #3b1fe0 30%,
-    #d20b14 66%,
-    #ea05f0 100%
-  );
 }
 
 html {
@@ -117,46 +101,10 @@ input::-webkit-inner-spin-button {
   transform: translateX(0);
 }
 
-.nav-backest {
-  background-image: linear-gradient(
-    135deg,
-    #de0a0a 0%,
-    #8650c8 50%,
-    #283acb 100%
-  );
-  width: 60%;
-  max-width: 360px;
-  min-width: 320;
-  transition-delay: 0.4s;
-}
-
-.nav-backest.visible {
-  transition-delay: 0s;
-}
-
-.nav-back {
-  background-color: #283acb;
-  background-image: linear-gradient(
-    135deg,
-    #283acb 0%,
-    #8650c8 50%,
-    #de0a0a 100%
-  );
-  background-repeat: no-repeat;
-  backdrop-filter: blur(8px);
-  width: 95%;
-  transition-delay: 0.2s;
-}
-
-.nav-back.visible {
-  transition-delay: 0.2s;
-}
-
 .nav-main {
   background: rgba(255, 255, 255, 0.1);
   width: 100%;
   padding: 40px;
-  transition-delay: 0s;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   border-radius: 16px;
