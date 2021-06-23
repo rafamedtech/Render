@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "bavro";
-  src: url("./fonts/bavro/bavro-regular-webfont.woff") format("woff");
+  src: url("/fonts/bavro/bavro-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
