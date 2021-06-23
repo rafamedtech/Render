@@ -9,6 +9,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "cocogoose";
+  src: url("/public/fonts/cocogoose/Cocogoose-Classic-Medium-trial.ttf")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 label {
   @apply text-white my-4;
 }

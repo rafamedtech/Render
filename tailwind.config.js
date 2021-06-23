@@ -7,11 +7,12 @@ module.exports = {
         "linear-gradient(135deg, #283acb 0%, #8650c8 50%, #de0a0a 100%)",
     }),
     color: {
-      render: "#283acb",
+      render: "#6C63FF",
     },
     extend: {
       fontFamily: {
         bavro: ["bavro"],
+        cocogoose: ["cocogoose"],
       },
     },
   },
