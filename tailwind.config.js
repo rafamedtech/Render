@@ -13,6 +13,7 @@ module.exports = {
       fontFamily: {
         bavro: ["bavro"],
         cocogoose: ["cocogoose"],
+        tommy: ["tommy"],
       },
     },
   },
