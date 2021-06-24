@@ -16,9 +16,11 @@ const closeNav = () => {
   });
 };
 
-links.forEach((link) => {
-  link.addEventListener("click", closeNav);
-});
-
 open_btn.addEventListener("click", openNav);
 close_btn.addEventListener("click", closeNav);
+
+if (document.documentElement.clientWidth < 768) {
+  links.forEach((link) => {
+    link.addEventListener("click", closeNav);
+  });
+}
