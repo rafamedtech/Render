@@ -4,14 +4,14 @@
 
 @font-face {
   font-family: "bavro";
-  src: url("/public/fonts/bavro/bavro-regular-webfont.woff") format("woff");
+  src: url("/fonts/bavro/bavro-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "cocogoose";
-  src: url("/public/fonts/cocogoose-classic-trial/Cocogoose-Classic-Medium-trial.woff")
+  src: url("/fonts/cocogoose-classic-trial/Cocogoose-Classic-Medium-trial.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
@@ -22,7 +22,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("MADE Tommy Soft Outline Regular"),
-    url("/public/fonts/made-tommy-soft-outline/MADE-Tommy-Soft-Regular-Outline.woff")
+    url("/fonts/made-tommy-soft-outline/MADE-Tommy-Soft-Regular-Outline.woff")
       format("woff");
 }
 
