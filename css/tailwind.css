@@ -310,3 +310,7 @@ input[type="number"] {
 button.glassmorphism-effect {
   background-color: #ef477a;
 }
+
+a {
+  display: flex;
+}
