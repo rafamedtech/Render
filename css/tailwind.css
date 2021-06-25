@@ -137,11 +137,11 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-i {
+a i {
   transition: 0.3s ease;
 }
 
-i:hover {
+a i:hover {
   transform: scale(1.2);
   transition: transform 0.3s ease;
 }
