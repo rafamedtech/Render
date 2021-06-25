@@ -137,15 +137,6 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-a i {
-  transition: 0.3s ease;
-}
-
-a i:hover {
-  transform: scale(1.2);
-  transition: transform 0.3s ease;
-}
-
 .nav-btn {
   border: none;
   background-color: transparent;
