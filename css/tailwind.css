@@ -85,7 +85,7 @@ textarea:focus {
 @tailwind utilities;
 
 .gradiente {
-  background-color: #283acb;
+  background-color: #7f2e84;
   background-image: linear-gradient(
     135deg,
     #5c4fa1 0%,
@@ -94,16 +94,6 @@ textarea:focus {
   );
   background-repeat: no-repeat;
 }
-/* .gradiente {
-  background-color: #283acb;
-  background-image: linear-gradient(
-    135deg,
-    #7f2e84 0%,
-    #5c4fa1 50%,
-    #7f2e84 100%
-  );
-  background-repeat: no-repeat;
-} */
 
 .glassmorphism-effect {
   background: rgba(255, 255, 255, 0.1);
@@ -112,10 +102,6 @@ textarea:focus {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.glassmorphism-inverted {
-  box-shadow: inset 0 8px 32px 0 rgba(255, 255, 255, 0.1);
 }
 
 html {
@@ -163,10 +149,6 @@ input[type="number"] {
   transition: transform 0.6s ease-in-out;
   z-index: 9999;
   overflow-x: hidden;
-}
-
-.nav.visible {
-  transform: translateX(0);
 }
 
 .nav-main {
@@ -284,9 +266,6 @@ input[type="number"] {
   .btn-cta:hover {
     transform: scale(1.2);
     transition: transform 0.4s ease;
-  }
-
-  .nav-main {
   }
 }
 

@@ -2,19 +2,20 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    backgroundImage: (theme) => ({
-      gradiente:
-        "linear-gradient(135deg, #283acb 0%, #8650c8 50%, #de0a0a 100%)",
-    }),
-    color: {
-      render: "#6C63FF",
-    },
     extend: {
       fontFamily: {
         bavro: ["bavro"],
         cocogoose: ["cocogoose"],
         cocogoosebold: ["cocogoosebold"],
         tommy: ["tommy"],
+      },
+      colors: {
+        render: {
+          blue: "#5c4fa1",
+          softpink: "#ee798a",
+          hotpink: "#ef477a",
+          purple: "#7f2e84",
+        },
       },
     },
   },
