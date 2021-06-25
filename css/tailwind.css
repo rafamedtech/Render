@@ -52,6 +52,14 @@
 }
 
 @font-face {
+  font-family: "cocogoosebold";
+  src: url("/fonts/cocogoose-classic-trial/Cocogoose-Classic-ExtraBold-trial.woff")
+    format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "tommy";
   font-style: normal;
   font-weight: normal;
