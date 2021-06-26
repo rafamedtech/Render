@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: "cocogoosebold";
-  src: url("/public/fonts/cocogoose-classic-trial/Cocogoose-Classic-ExtraBold-trial.woff")
+  src: url("/fonts/cocogoose-classic-trial/Cocogoose-Classic-ExtraBold-trial.woff")
     format("woff");
   font-weight: bold;
   font-style: normal;
@@ -36,7 +36,7 @@
 }
 
 /* Fonts for dev */
-@font-face {
+/* @font-face {
   font-family: "bavro";
   src: url("/public/fonts/bavro/bavro-regular-webfont.woff") format("woff");
   font-weight: normal;
@@ -53,7 +53,7 @@
 
 @font-face {
   font-family: "cocogoosebold";
-  src: url("/fonts/cocogoose-classic-trial/Cocogoose-Classic-ExtraBold-trial.woff")
+  src: url("/public/fonts/cocogoose-classic-trial/Cocogoose-Classic-ExtraBold-trial.woff")
     format("woff");
   font-weight: bold;
   font-style: normal;
@@ -65,8 +65,8 @@
   font-weight: normal;
   src: local("MADE Tommy Soft Outline Regular"),
     url("/public/fonts/made-tommy-soft-outline/MADE-Tommy-Soft-Regular-Outline.woff")
-      format("woff");
-}
+      format("woff"); 
+} */
 
 label {
   @apply text-white my-4;
