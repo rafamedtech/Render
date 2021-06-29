@@ -7,7 +7,6 @@ module.exports = {
         bavro: ["bavro"],
         cocogoose: ["cocogoose"],
         cocogoosebold: ["cocogoosebold"],
-        tommy: ["tommy"],
       },
       colors: {
         render: {
