@@ -82,7 +82,7 @@ function emailValidation() {
 function phoneValidation() {
   const regexn = /^[0-9]{10}$/;
 
-  if (regexn.test(formPhone.value) || formPhone.value != "") {
+  if (regexn.test(formPhone.value)) {
     invalidPhone.innerText = "";
   } else {
     invalidPhone.innerText = "Telefono invalido";
