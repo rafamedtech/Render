@@ -72,7 +72,7 @@ function emailValidation() {
   if (regex.test(formEmail.value) || regexo.test(formEmail.value)) {
     invalidEmail.innerText = "";
   } else {
-    invalidEmail.innerText = "Email invalido";
+    invalidEmail.innerText = "Email inválido";
     invalidEmail.classList.add("text-red-500");
     formEmail.value = "";
     return false;
@@ -85,7 +85,7 @@ function phoneValidation() {
   if (regexn.test(formPhone.value)) {
     invalidPhone.innerText = "";
   } else {
-    invalidPhone.innerText = "Telefono invalido";
+    invalidPhone.innerText = "Teléfono inválido";
     invalidPhone.classList.add("text-red-500");
     formPhone.value = "";
     return false;
