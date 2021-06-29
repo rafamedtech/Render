@@ -1,7 +1,17 @@
 const open_btn = document.querySelector(".open-btn");
-const close_btn = document.querySelector(".close-btn");
+const nav_close_btn = document.querySelector(".close-btn");
 const nav = document.querySelectorAll(".nav");
 const links = document.querySelectorAll(".list li a");
+const submitForm = document.querySelector("#send-message");
+const modal = document.querySelector("#modal");
+const formName = document.getElementById("name");
+const formEmail = document.getElementById("email");
+const formPhone = document.getElementById("phone");
+const formMessage = document.getElementById("comment");
+const formError = document.getElementById("formError");
+const inputs = document.querySelectorAll(".input-validation");
+const invalidEmail = document.querySelector(".invalid-email");
+const invalidPhone = document.querySelector(".invalid-phone");
 
 const openNav = () => {
   nav.forEach((nav_el) => {
@@ -17,10 +27,67 @@ const closeNav = () => {
 };
 
 open_btn.addEventListener("click", openNav);
-close_btn.addEventListener("click", closeNav);
+nav_close_btn.addEventListener("click", closeNav);
 
 if (document.documentElement.clientWidth < 768) {
   links.forEach((link) => {
     link.addEventListener("click", closeNav);
   });
+}
+
+//Modal message
+submitForm.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  emailValidation();
+  phoneValidation();
+
+  inputs.forEach((input) => {
+    if (input.value === "" || input.value == null) {
+      formError.innerText = "Favor de llenar todos los campos";
+      return false;
+    } else {
+      console.log("si funciono");
+      input.classList.add("success");
+      return true;
+    }
+  });
+
+  if (
+    formName.classList.contains("success") &&
+    formEmail.classList.contains("success") &&
+    formPhone.classList.contains("success") &&
+    formMessage.classList.contains("success")
+  ) {
+    console.log("esto tambien funciono");
+    modal.classList.remove("hidden-modal");
+  }
+});
+
+function emailValidation() {
+  const regex = /^([\.\_a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,8}$/;
+  const regexo =
+    /^([\.\_a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,3}\.[a-zA-Z]{1,3}$/;
+
+  if (regex.test(formEmail.value) || regexo.test(formEmail.value)) {
+    invalidEmail.innerText = "";
+  } else {
+    invalidEmail.innerText = "Email invalido";
+    invalidEmail.classList.add("text-red-500");
+    formEmail.value = "";
+    return false;
+  }
+}
+
+function phoneValidation() {
+  const regexn = /^[0-9]{10}$/;
+
+  if (regexn.test(formPhone.value) || formPhone.value != "") {
+    invalidPhone.innerText = "";
+  } else {
+    invalidPhone.innerText = "Telefono invalido";
+    invalidPhone.classList.add("text-red-500");
+    formPhone.value = "";
+    return false;
+  }
 }

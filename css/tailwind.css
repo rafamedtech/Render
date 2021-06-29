@@ -3,7 +3,7 @@
 @tailwind components;
 
 /* Fonts for prod */
-@font-face {
+/* @font-face {
   font-family: "bavro";
   src: url("/fonts/bavro/bavro-regular-webfont.woff") format("woff");
   font-weight: normal;
@@ -33,10 +33,10 @@
   src: local("MADE Tommy Soft Outline Regular"),
     url("/fonts/made-tommy-soft-outline/MADE-Tommy-Soft-Regular-Outline.woff")
       format("woff");
-}
+} */
 
 /* Fonts for dev */
-/* @font-face {
+@font-face {
   font-family: "bavro";
   src: url("/public/fonts/bavro/bavro-regular-webfont.woff") format("woff");
   font-weight: normal;
@@ -65,8 +65,8 @@
   font-weight: normal;
   src: local("MADE Tommy Soft Outline Regular"),
     url("/public/fonts/made-tommy-soft-outline/MADE-Tommy-Soft-Regular-Outline.woff")
-      format("woff"); 
-} */
+      format("woff");
+}
 
 label {
   @apply text-white my-4;
@@ -82,9 +82,19 @@ textarea:focus {
   outline: 0;
 }
 
-@tailwind utilities;
+.services:hover {
+  @apply text-render-hotpink;
+}
 
 .gradiente {
+  @apply bg-gradient-to-br from-render-blue via-render-purple to-render-blue bg-no-repeat;
+  background-color: #7f2e84;
+  color: #777;
+}
+
+@tailwind utilities;
+
+/* .gradiente {
   background-color: #7f2e84;
   background-image: linear-gradient(
     135deg,
@@ -93,7 +103,7 @@ textarea:focus {
     #5c4fa1 100%
   );
   background-repeat: no-repeat;
-}
+} */
 
 .glassmorphism-effect {
   background: rgba(255, 255, 255, 0.1);
@@ -260,36 +270,63 @@ input[type="number"] {
   }
 
   .btn-cta {
-    transition: transform 0.4s ease;
+    transition: 0.4s ease;
   }
 
-  .btn-cta:hover {
+  .btn-cta:hover,
+  .btn-cta.glassmorphism-effect:hover {
     transform: scale(1.2);
-    transition: transform 0.4s ease;
+    transition: 0.4s ease;
+    background-color: #fff;
+    color: #7f2e84;
+    /* color: #5c4fa1; */
+  }
+
+  button:hover a {
+    color: #7f2e84;
   }
 }
 
-/* Custom colors */
-.blue {
-  color: #5c4fa1;
-}
-
-.soft-pink {
-  color: #ee798a;
-}
-
-.hot-pink {
-  color: #ef477a;
-}
-
-.purple {
-  color: #7f2e84;
-}
-
-button.glassmorphism-effect {
+button.glassmorphism-effect,
+.btn-cta.glassmorphism-effect {
   background-color: #ef477a;
 }
 
 a {
   display: flex;
+  color: #fff;
+}
+
+.caffenio {
+  background-image: url(/public/images/projects/CAFFENIO.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.link {
+  opacity: 0;
+  transition: 0.3s ease;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.link:hover {
+  color: #ef477a;
+}
+
+.caffenio:hover .link,
+.caffenio:focus .link {
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+.hidden-modal {
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
+#modal {
+  transition: transform 0.4s ease;
+  border-radius: 16px;
 }

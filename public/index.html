@@ -14,7 +14,7 @@
   </head>
   <body class="gradiente font-cocogoose">
     <div class="nav nav-main md:mt-9 lg:mt-0 lg:glassmorphism-effect">
-      <button class="nav-btn close-btn">
+      <button class="nav-btn close-btn focus:outline-none">
         <i class="fas fa-times"></i>
       </button>
 
@@ -35,7 +35,7 @@
             src="./images/LogoR1.png"
             alt=""
           />
-          <button class="nav-btn open-btn mt-2 mr-2">
+          <button class="nav-btn open-btn mt-2 mr-2 focus:outline-none">
             <i class="fas fa-bars text-3xl"></i>
           </button>
         </div>
@@ -88,7 +88,7 @@
                 btn-cta
               "
             >
-              <a class="bg-render-dark" href="#contacto">Contáctanos</a>
+              <a href="#contacto">Contáctanos</a>
             </button>
 
             <!-- <p class="font-bavro text-white text-6xl">Render</p>
@@ -151,7 +151,7 @@
             <img loading="lazy" class="w-24 mr-4 lg:w-40" src="./images/social.png" alt="">
             <!-- <img loading="lazy" class="w-24 mr-4 lg:w-40" src="https://i.imgur.com/QRctOlq.png" alt=""> -->
             <div class="text-right">
-              <h4 class="text-2xl md:text-3xl font-cocogoosebold hot-pink">
+              <h4 class="text-2xl md:text-3xl font-cocogoosebold text-render-hotpink">
                 Manejo de Redes Sociales
               </h4>
               <p class="text-purple-200">
@@ -176,7 +176,7 @@
             <!-- <img loading="lazy" class="w-24 mr-4 lg:w-40" src="https://i.imgur.com/1jeTlpj.png" alt=""> -->
             <img loading="lazy" class="w-24 mr-4 lg:w-40" src="./images/Audiovisual.png" alt="">
             <div class="text-right">
-              <h4 class="text-2xl md:text-3xl font-cocogoosebold hot-pink">
+              <h4 class="text-2xl md:text-3xl font-cocogoosebold text-render-hotpink">
                 Producción Audiovisual
               </h4>
               <p class="text-purple-200">
@@ -201,7 +201,7 @@
             <!-- <img loading="lazy" class="w-24 mr-4 lg:w-40" src="https://i.imgur.com/wQBcTXF.png" alt=""> -->
             <img loading="lazy" class="w-24 mr-4 lg:w-40" src="./images/Diseno-web.png" alt="">
             <div class="text-right">
-              <h4 class="text-2xl md:text-3xl font-cocogoosebold hot-pink">Diseño Gráfico y Desarrollo web</h4>
+              <h4 class="text-2xl md:text-3xl font-cocogoosebold text-render-hotpink">Diseño Gráfico y Desarrollo web</h4>
               <p class="text-purple-200">
                 Creamos soluciones que representen perfectamente tu marca.
               </p>
@@ -274,7 +274,7 @@
         </h3>
         <div class="md:flex md:flex-col">
           <div class="md:w-1/2">
-            <h4 class="font-cocogoose text-2xl hot-pink font-bold text-center mb-2">
+            <h4 class="font-cocogoose text-2xl text-render-hotpink font-bold text-center mb-2">
               Hacer la Diferencia
             </h4>
             <div class="w-1/3 border border-purple-300 mx-auto"></div>
@@ -285,7 +285,7 @@
             </p>
           </div>
           <div class="md:w-1/2 md:self-end">
-            <h4 class="font-cocogoose text-2xl hot-pink font-bold text-center mb-2">
+            <h4 class="font-cocogoose text-2xl text-render-hotpink font-bold text-center mb-2">
               Ideas Inovadoras
             </h4>
             <div class="w-1/3 border border-purple-300 mx-auto"></div>
@@ -300,34 +300,71 @@
       </section>
 
       <section id="portafolio" class="relative lg:my-24">
-        <div class="glassmorphism-effect">
+        <div class="glassmorphism-effect pb-8">
           <h3 data-aos="fade-in" data-aos-duration="1000" class="font-bavro text-white text-3xl text-center m-4">
             ALGUNOS DE NUESTROS CLIENTES
           </h3>
           <div class="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
-            <div data-aos="fade-in" data-aos-duration="1000" class="p-8">
+            <div data-aos="fade-in" data-aos-duration="1000" class="p-8 pb-0">
               <!-- <img loading="lazy" src="https://i.imgur.com/Oue6PMd.png" alt="" /> -->
-              <img loading="lazy" src="./images/projects/CAFFENIO.png" alt="" />
+              <img class="client-hover" loading="lazy" src="./images/projects/CAFFENIO.png" alt="" />
+              <div class="flex justify-center mt-5">
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-thumbs-up "></i></a>
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-file-video"></i></a>
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-object-group"></i></a>
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-file-code"></i></a>
+              </div>
             </div>
-            <div data-aos="fade-in" data-aos-duration="1000" class="p-8">
+
+            <div data-aos="fade-in" data-aos-duration="1000" class="p-8 pb-0">
               <!-- <img loading="lazy" src="https://i.imgur.com/mdyvFS0.png" alt="" /> -->
               <img loading="lazy" src="./images/projects/SOFIA.png" alt="" />
+                            <div class="flex justify-center mt-5">
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-thumbs-up "></i></a>
+                <!-- <a class="mx-3 text-3xl services" href="#"><i class="far fa-file-video"></i></a>
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-object-group"></i></a> -->
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-file-code"></i></a>
+              </div>
             </div>
-            <div data-aos="fade-in" data-aos-duration="1000" class="p-8">
+            <div data-aos="fade-in" data-aos-duration="1000" class="p-8 pb-0">
               <!-- <img loading="lazy" src="https://i.imgur.com/0l2w7rA.png" alt="" /> -->
               <img loading="lazy" src="./images/projects/RLC.png" alt="" />
+                            <div class="flex justify-center mt-5">
+                <!-- <a class="mx-3 text-3xl services" href="#"><i class="far fa-thumbs-up "></i></a>
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-file-video"></i></a>
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-object-group"></i></a> -->
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-file-code"></i></a>
+              </div>
             </div>
-            <div data-aos="fade-in" data-aos-duration="1000" class="p-8">
+            <div data-aos="fade-in" data-aos-duration="1000" class="p-8 pb-0">
               <!-- <img loading="lazy" src="https://i.imgur.com/gEleMUK.png" alt="" /> -->
               <img loading="lazy" src="./images/projects/TOPGARAGE.png" alt="" />
+                            <div class="flex justify-center mt-5">
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-thumbs-up "></i></a>
+                <!-- <a class="mx-3 text-3xl services" href="#"><i class="far fa-file-video"></i></a>
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-object-group"></i></a>
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-file-code"></i></a> -->
+              </div>
             </div>
-            <div data-aos="fade-in" data-aos-duration="1000" class="p-8">
+            <div data-aos="fade-in" data-aos-duration="1000" class="p-8 pb-0">
               <!-- <img loading="lazy" src="https://i.imgur.com/tKa8bBe.png" alt="" /> -->
               <img loading="lazy" src="./images/projects/filtermag.png" alt="" />
+                            <div class="flex justify-center mt-5">
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-thumbs-up "></i></a>
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-file-video"></i></a>
+                <!-- <a class="mx-3 text-3xl services" href="#"><i class="far fa-object-group"></i></a>
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-file-code"></i></a> -->
+              </div>
             </div>
-            <div data-aos="fade-in" data-aos-duration="1000" class="p-8">
+            <div data-aos="fade-in" data-aos-duration="1000" class="p-8 pb-0">
               <!-- <img loading="lazy" src="https://i.imgur.com/MAB8EcF.png" alt="" /> -->
               <img loading="lazy" src="./images/projects/LIMON.png" alt="" />
+                            <div class="flex justify-center mt-5">
+                <!-- <a class="mx-3 text-3xl services" href="#"><i class="far fa-thumbs-up "></i></a>
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-file-video"></i></a> -->
+                <a class="mx-3 text-3xl services" href="#"><i class="far fa-object-group"></i></a>
+                <!-- <a class="mx-3 text-3xl services" href="#"><i class="far fa-file-code"></i></a> -->
+              </div>
             </div>
           </div>
         </div>
@@ -340,14 +377,14 @@
             <!-- <img loading="lazy" class="rounded-2xl" src="https://i.imgur.com/2As8xZh.jpg" alt="" /> -->
             <img loading="lazy" class="rounded-2xl" src="./images/equipo/carlos.jpg" alt="" />
             <h5 class="font-bavro text-xl text-white text-center mt-4">CARLOS</h5>
-            <p class="hot-pink text-center font-thin">Creative Director</p>
+            <p class="text-render-hotpink text-center font-thin">Creative Director</p>
           </div>
           
           <div data-aos="fade-in" data-aos-duration="1000" class="my-4">
             <!-- <img loading="lazy" class="rounded-2xl" src="https://i.imgur.com/pJhh9ji.jpg" alt="" /> -->
             <img loading="lazy" class="rounded-2xl" src="./images/equipo/ahmed.jpg" alt="" />
             <h5 class="font-bavro text-xl text-white text-center mt-4">AHMED</h5>
-            <p class="hot-pink text-center font-thin">
+            <p class="text-render-hotpink text-center font-thin">
               Head Graphic Designer
             </p>
           </div>
@@ -355,25 +392,25 @@
             <!-- <img loading="lazy" class="rounded-2xl" src="https://i.imgur.com/9bBQlWf.jpg" alt="" /> -->
             <img loading="lazy" class="rounded-2xl" src="./images/equipo/Vale.jpg" alt="" />
             <h5 class="font-bavro text-xl text-white text-center mt-4">VALERIA</h5>
-            <p class="hot-pink text-center font-thin">Graphic Designer</p>
+            <p class="text-render-hotpink text-center font-thin">Graphic Designer</p>
           </div>
           <div data-aos="fade-in" data-aos-duration="1000" class="my-4">
             <!-- <img loading="lazy" class="rounded-2xl" src="https://i.imgur.com/avojuuf.jpg" alt="" /> -->
             <img loading="lazy" class="rounded-2xl" src="./images/equipo/María.jpg" alt="" />
             <h5 class="font-bavro text-xl text-white text-center mt-4">MARIA</h5>
-            <p class="hot-pink text-center font-thin">Graphic Designer</p>
+            <p class="text-render-hotpink text-center font-thin">Graphic Designer</p>
           </div>
           <div data-aos="fade-in" data-aos-duration="1000" class="my-4">
             <!-- <img loading="lazy" class="rounded-2xl" src="https://i.imgur.com/avojuuf.jpg" alt="" /> -->
             <img loading="lazy" class="rounded-2xl" src="./images/equipo/eduardo.jpg" alt="" />
             <h5 class="font-bavro text-xl text-white text-center mt-4">EDUARDO</h5>
-            <p class="hot-pink text-center font-thin">IT Director</p>
+            <p class="text-render-hotpink text-center font-thin">IT Director</p>
           </div>
           <div data-aos="fade-in" data-aos-duration="1000" class="my-4">
             <!-- <img loading="lazy" class="rounded-2xl" src="https://i.imgur.com/avojuuf.jpg" alt="" /> -->
             <img loading="lazy" class="rounded-2xl" src="./images/equipo/Tury.jpg" alt="" />
             <h5 class="font-bavro text-xl text-white text-center mt-4">TURY</h5>
-            <p class="hot-pink text-center font-thin">Community Manager</p>
+            <p class="text-render-hotpink text-center font-thin">Community Manager</p>
           </div>
          
         </div>
@@ -398,42 +435,66 @@
               <img loading="lazy" src="./images/contact2.png" alt="" />
             </figure>
           </div>
-          <form class="flex flex-col m-4 md:w-1/2 md:mr-8" action="">
-            <label for="name">Nombre Completo</label>
-            <input
-              class="glassmorphism-effect glassmorphism-inverted text-white"
-              type="text"
-              name="name"
-              id="name"
-            />
+          <form id="form" class="flex flex-col m-4 md:w-1/2 md:mr-8" action="">
+            
+              <label for="name">Nombre Completo</label>
+              <input
+                class="glassmorphism-effect glassmorphism-inverted text-white input-validation mb-3"
+                type="text"
+                name="name"
+                id="name"
+                
+              />
+            
 
-            <label for="phone">Número de Teléfono</label>
-            <input
-              class="glassmorphism-effect glassmorphism-inverted text-white"
-              type="number"
-              name="phone"
-              id="phone"
-            />
+            
+              <label for="phone">Número de Teléfono</label>
+              <input
+                class="glassmorphism-effect glassmorphism-inverted text-white font-bavro input-validation mb-3"
+                type="number"
+                name="phone"
+                id="phone"
+                
+              />
+              <span class="invalid-phone"></span>
+            
 
-            <label for="email">Correo Electrónico</label>
-            <input
-              class="glassmorphism-effect glassmorphism-inverted text-white"
-              type="email"
-              name="email"
-              id="email"
-            />
+            
+              <label for="email">Correo Electrónico</label>
+              <input
+                class="glassmorphism-effect glassmorphism-inverted text-white input-validation mb-3"
+                type="text"
+                name="email"
+                id="email"
+                
+              />
+              <span class="invalid-email"></span>
+            
 
-            <label for="comment">Tu Mensaje</label>
-            <textarea
-              class="glassmorphism-effect glassmorphism-inverted p-4 text-white"
-              name="comment"
-              id="comment"
-            ></textarea>
-            <button
+            
+
+              <label for="comment">Tu Mensaje</label>
+              <textarea
+                class="glassmorphism-effect glassmorphism-inverted p-4 text-white input-validation mb-3"
+                name="comment"
+                id="comment"
+                
+              ></textarea>
+            
+            <button  id="send-message"
               class="glassmorphism-effect my-6 font-bavro text-white w-40 mx-auto py-2"
             >
               Enviar
             </button>
+            <span id="formError" class="text-center text-red-500"></span>
+            
+            <div id="modal" class="hidden-modal h-full w-full absolute inset-0 gradiente flex flex-col justify-center items-center">
+              <article class="flex flex-col items-center text-center relative">
+                <p class="text-2xl text-white mb-4">Gracias por enviar tu mensaje, te contactaremos pronto</p>
+                <input class="btn-cta cursor-pointer glassmorphism-effect my-6 font-bavro text-white w-40 mx-auto py-2" type="submit" value="Enviar">
+              </article>
+            </div>
+
           </form>
         </div>
       </section>
