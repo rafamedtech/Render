@@ -1,34 +1,32 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
-@layer components {
-  /* Fonts for prod */
-  @font-face {
-    font-family: "bavro";
-    src: url("/fonts/bavro/bavro-regular-webfont.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-  }
+/* Fonts for prod */
+@font-face {
+  font-family: "bavro";
+  src: url("/fonts/bavro/bavro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: "cocogoose";
-    src: url("/fonts/cocogoose-classic-trial/Cocogoose-Classic-Medium-trial.woff")
-      format("woff");
-    font-weight: normal;
-    font-style: normal;
-  }
+@font-face {
+  font-family: "cocogoose";
+  src: url("/fonts/cocogoose-classic-trial/Cocogoose-Classic-Medium-trial.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: "cocogoosebold";
-    src: url("/fonts/cocogoose-classic-trial/Cocogoose-Classic-ExtraBold-trial.woff")
-      format("woff");
-    font-weight: bold;
-    font-style: normal;
-  }
+@font-face {
+  font-family: "cocogoosebold";
+  src: url("/fonts/cocogoose-classic-trial/Cocogoose-Classic-ExtraBold-trial.woff")
+    format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
 
-  /* Fonts for dev */
-  /* @font-face {
+/* Fonts for dev */
+/* @font-face {
   font-family: "bavro";
   src: url("/public/fonts/bavro/bavro-regular-webfont.woff") format("woff");
   font-weight: normal;
@@ -60,39 +58,40 @@
       format("woff");
 } */
 
-  .glassmorphism-effect {
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-  }
-
-  label {
-    @apply text-white my-4;
-  }
-
-  input {
-    height: 50px;
-    padding-left: 10px;
-  }
-
-  input:focus,
-  textarea:focus {
-    outline: 0;
-  }
-
-  .services:hover {
-    @apply text-render-hotpink;
-  }
-
-  .gradiente {
-    @apply bg-gradient-to-br from-render-blue via-render-purple to-render-blue bg-no-repeat;
-    background-color: #7f2e84;
-    color: #777;
-  }
+.glassmorphism-effect {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
+label {
+  @apply text-white my-4;
+}
+
+input {
+  height: 50px;
+  padding-left: 10px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 0;
+}
+
+.services:hover {
+  @apply text-render-hotpink;
+}
+
+.gradiente {
+  @apply bg-gradient-to-br from-render-blue via-render-purple to-render-blue bg-no-repeat;
+  background-color: #7f2e84;
+  color: #777;
+}
+
+@tailwind utilities;
 
 html {
   scroll-behavior: smooth;
@@ -199,6 +198,7 @@ input[type="number"] {
     backdrop-filter: blur(0);
     border: 0;
     width: auto;
+    height: fit-content;
     transform: translateX(0);
     position: absolute;
     padding: 0;
@@ -208,6 +208,7 @@ input[type="number"] {
     flex-direction: row;
     padding-top: 10px;
     align-items: initial;
+    height: fit-content;
   }
 
   .open-btn {
