@@ -221,6 +221,7 @@ input[type="number"] {
 
   .list li {
     font-size: 1rem;
+    margin-right: 10px;
   }
 
   .list li a {
