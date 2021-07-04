@@ -208,6 +208,7 @@
     .list {
       flex-direction: row;
       padding-top: 10px;
+      align-items: initial;
     }
 
     .open-btn {
