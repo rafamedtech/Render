@@ -195,12 +195,14 @@ input[type="number"] {
 
 .list ul {
   list-style-type: none;
-  padding-left: 20px;
+  /* padding-left: 20px; */
+  padding: 0;
 }
 
 @media (min-width: 768px) {
   .nav {
     top: 0;
+    margin-right: 6%;
   }
   .nav-main {
     background-color: transparent;
@@ -214,9 +216,9 @@ input[type="number"] {
 
   .list {
     flex-direction: row;
-    padding-right: 50px;
+    /* padding-right: 50px; */
     padding-top: 10px;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     /* right: 0; */
   }
 
@@ -243,7 +245,8 @@ input[type="number"] {
 
 @media (min-width: 1000px) {
   .list {
-    padding-right: 90px;
+    padding: 0;
+    padding-top: 10px;
   }
 
   .list li {
