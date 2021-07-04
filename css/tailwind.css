@@ -94,199 +94,197 @@
   }
 }
 
-@layer utilities {
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  body {
-    min-height: 100vh;
-    position: relative;
-  }
+body {
+  min-height: 100vh;
+  position: relative;
+}
 
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
-  input[type="number"] {
-    -moz-appearance: textfield;
-  }
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 
-  .nav-btn {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 20px;
-    color: #fff;
-    z-index: 9999;
-  }
+.nav-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  z-index: 9999;
+}
 
-  .open-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    opacity: 1;
-    transition: opacity 0.4s ease;
-  }
+.open-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
 
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  transform: translateX(400%);
+  transition: transform 0.6s ease-in-out;
+  z-index: 9999;
+  overflow-x: hidden;
+}
+
+.nav-main {
+  /* position: absolute; */
+  background: rgba(255, 255, 255, 0.1);
+  width: 100vw;
+  padding: 40px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.close-btn {
+  opacity: 0.3;
+  position: absolute;
+  top: 15rem;
+  right: 2rem;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: end;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.list li {
+  margin: 20px 0;
+}
+
+.list li a {
+  /* color: rgb(34, 31, 31); */
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.list ul {
+  list-style-type: none;
+  /* padding-left: 20px; */
+  padding: 0;
+}
+
+@media (min-width: 768px) {
   .nav {
-    position: fixed;
     top: 0;
-    right: 0;
-    height: 100vh;
-    transform: translateX(400%);
-    transition: transform 0.6s ease-in-out;
-    z-index: 9999;
-    overflow-x: hidden;
+    margin-right: 6%;
   }
-
   .nav-main {
-    /* position: absolute; */
-    background: rgba(255, 255, 255, 0.1);
-    width: 100vw;
-    padding: 40px;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-  }
-
-  .close-btn {
-    opacity: 0.3;
+    background-color: transparent;
+    backdrop-filter: blur(0);
+    border: 0;
+    width: auto;
+    transform: translateX(0);
     position: absolute;
-    top: 15rem;
-    right: 2rem;
+    padding: 0;
   }
 
   .list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: end;
-    align-items: flex-end;
-    height: 100%;
+    flex-direction: row;
+    padding-top: 10px;
+    align-items: initial;
+  }
+
+  .open-btn {
+    display: none;
+  }
+
+  .close-btn {
+    display: none;
   }
 
   .list li {
-    margin: 20px 0;
+    font-size: 1rem;
   }
 
   .list li a {
-    /* color: rgb(34, 31, 31); */
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
+    font-size: 16px;
   }
 
-  .list ul {
-    list-style-type: none;
-    /* padding-left: 20px; */
+  .list li:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .list {
     padding: 0;
+    padding-top: 10px;
   }
 
-  @media (min-width: 768px) {
-    .nav {
-      top: 0;
-      margin-right: 6%;
-    }
-    .nav-main {
-      background-color: transparent;
-      backdrop-filter: blur(0);
-      border: 0;
-      width: auto;
-      transform: translateX(0);
-      position: absolute;
-      padding: 0;
-    }
-
-    .list {
-      flex-direction: row;
-      padding-top: 10px;
-      align-items: initial;
-    }
-
-    .open-btn {
-      display: none;
-    }
-
-    .close-btn {
-      display: none;
-    }
-
-    .list li {
-      font-size: 1rem;
-    }
-
-    .list li a {
-      font-size: 16px;
-    }
-
-    .list li:not(:last-child) {
-      margin-right: 20px;
-    }
-  }
-
-  @media (min-width: 1000px) {
-    .list {
-      padding: 0;
-      padding-top: 10px;
-    }
-
-    .list li {
-      transition: transform 0.4s ease;
-      height: fit-content;
-    }
-
-    .list li:hover {
-      transform: scale(1.2);
-      transition: transform 0.4s ease;
-    }
-
-    .list li:not(:last-child) {
-      margin-right: 30px;
-    }
-
-    .btn-cta {
-      transition: 0.4s ease;
-    }
-
-    .btn-cta:hover,
-    .btn-cta.glassmorphism-effect:hover {
-      transform: scale(1.2);
-      transition: 0.4s ease;
-      background-color: #fff;
-      color: #7f2e84;
-      /* color: #5c4fa1; */
-    }
-
-    button:hover a {
-      color: #7f2e84;
-    }
-  }
-
-  button.glassmorphism-effect,
-  .btn-cta.glassmorphism-effect {
-    background-color: #ef477a;
-  }
-
-  a {
-    display: flex;
-    color: #fff;
-  }
-
-  .hidden-modal {
-    transform: scale(0);
-    transition: transform 0.3s ease;
-  }
-
-  #modal {
+  .list li {
     transition: transform 0.4s ease;
-    border-radius: 16px;
+    height: fit-content;
   }
+
+  .list li:hover {
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+  }
+
+  .list li:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .btn-cta {
+    transition: 0.4s ease;
+  }
+
+  .btn-cta:hover,
+  .btn-cta.glassmorphism-effect:hover {
+    transform: scale(1.2);
+    transition: 0.4s ease;
+    background-color: #fff;
+    color: #7f2e84;
+    /* color: #5c4fa1; */
+  }
+
+  button:hover a {
+    color: #7f2e84;
+  }
+}
+
+button.glassmorphism-effect,
+.btn-cta.glassmorphism-effect {
+  background-color: #ef477a;
+}
+
+a {
+  display: flex;
+  color: #fff;
+}
+
+.hidden-modal {
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
+#modal {
+  transition: transform 0.4s ease;
+  border-radius: 16px;
 }
