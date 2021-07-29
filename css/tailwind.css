@@ -3,24 +3,24 @@
 
 /* Fonts for prod */
 @font-face {
-  font-family: "bavro";
-  src: url("/fonts/bavro/bavro-regular-webfont.woff") format("woff");
+  font-family: 'bavro';
+  src: url('/fonts/bavro/bavro-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "cocogoose";
-  src: url("/fonts/cocogoose-classic-trial/Cocogoose-Classic-Medium-trial.woff")
-    format("woff");
+  font-family: 'cocogoose';
+  src: url('/fonts/cocogoose-classic-trial/Cocogoose-Classic-Medium-trial.woff')
+    format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "cocogoosebold";
-  src: url("/fonts/cocogoose-classic-trial/Cocogoose-Classic-ExtraBold-trial.woff")
-    format("woff");
+  font-family: 'cocogoosebold';
+  src: url('/fonts/cocogoose-classic-trial/Cocogoose-Classic-ExtraBold-trial.woff')
+    format('woff');
   font-weight: bold;
   font-style: normal;
 }
@@ -91,7 +91,23 @@ textarea:focus {
   color: #777;
 }
 
+.client {
+  display: grid;
+  place-items: center;
+  height: auto;
+  width: 100%;
+}
+
+.client-card {
+  height: 350px;
+}
+
 @tailwind utilities;
+
+.client img {
+  width: 200px;
+  height: auto;
+}
 
 html {
   scroll-behavior: smooth;
@@ -108,7 +124,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type="number"] {
+input[type='number'] {
   -moz-appearance: textfield;
 }
 
