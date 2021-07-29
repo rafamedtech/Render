@@ -81,8 +81,13 @@ textarea:focus {
   outline: 0;
 }
 
+.services {
+  transition: all 0.3s ease;
+}
+
 .services:hover {
-  @apply text-render-hotpink;
+  transition: all 0.3s ease;
+  @apply text-render-hotpink scale-125;
 }
 
 .gradiente {
