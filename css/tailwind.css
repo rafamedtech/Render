@@ -117,7 +117,7 @@ textarea:focus {
 .client-card {
   /* height: 316px; */
   scroll-snap-align: center;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
   width: 300px;
   @apply h-[316px] mr-4 lg:mr-0 md:h-64;
 }
