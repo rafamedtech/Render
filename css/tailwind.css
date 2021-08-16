@@ -105,21 +105,15 @@ textarea:focus {
 }
 
 .client {
-  /* position: relative;
-  display: grid;
-  place-items: center;
-  height: 316px; */
   width: fit-content;
   padding: 10px;
   @apply relative grid place-items-center h-[316px] w-44 md:w-32;
 }
 
 .client-card {
-  /* height: 316px; */
   scroll-snap-align: center;
-  /* margin-right: 1rem; */
   width: 300px;
-  @apply h-[316px] mr-4 lg:mr-0 md:h-64;
+  @apply h-[316px] mr-4 lg:mr-0 md:h-64 w-;
 }
 
 .team-card {
@@ -129,7 +123,6 @@ textarea:focus {
 
 .team-member {
   width: fit-content;
-  /* padding: 10px; */
   @apply relative grid place-items-center w-40 md:w-48 lg:w-60 lg:mb-4;
 }
 

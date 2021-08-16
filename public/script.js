@@ -1,66 +1,66 @@
-const open_btn = document.querySelector(".open-btn");
-const nav_close_btn = document.querySelector(".close-btn");
-const nav = document.querySelectorAll(".nav");
-const links = document.querySelectorAll(".list li a");
-const submitForm = document.querySelector("#send-message");
-const modal = document.querySelector("#modal");
-const formName = document.getElementById("name");
-const formEmail = document.getElementById("email");
-const formPhone = document.getElementById("phone");
-const formMessage = document.getElementById("comment");
-const formError = document.getElementById("formError");
-const inputs = document.querySelectorAll(".input-validation");
-const invalidEmail = document.querySelector(".invalid-email");
-const invalidPhone = document.querySelector(".invalid-phone");
+const open_btn = document.querySelector('.open-btn');
+const nav_close_btn = document.querySelector('.close-btn');
+const nav = document.querySelectorAll('.nav');
+const links = document.querySelectorAll('.list li a');
+const submitForm = document.querySelector('#send-message');
+const modal = document.querySelector('#modal');
+const formName = document.getElementById('name');
+const formEmail = document.getElementById('email');
+const formPhone = document.getElementById('phone');
+const formMessage = document.getElementById('comment');
+const formError = document.getElementById('formError');
+const inputs = document.querySelectorAll('.input-validation');
+const invalidEmail = document.querySelector('.invalid-email');
+const invalidPhone = document.querySelector('.invalid-phone');
 
 const openNav = () => {
   nav.forEach((nav_el) => {
-    nav_el.style.transform = "translateX(0)";
+    nav_el.style.transform = 'translateX(0)';
   });
 };
 
 const closeNav = () => {
   nav.forEach((nav_el) => {
-    nav_el.style.transform = "translateX(400%)";
+    nav_el.style.transform = 'translateX(400%)';
     open_btn.style.opacity = 1;
   });
 };
 
-open_btn.addEventListener("click", openNav);
-nav_close_btn.addEventListener("click", closeNav);
+open_btn.addEventListener('click', openNav);
+nav_close_btn.addEventListener('click', closeNav);
 
 if (document.documentElement.clientWidth < 768) {
   links.forEach((link) => {
-    link.addEventListener("click", closeNav);
+    link.addEventListener('click', closeNav);
   });
 }
 
 //Modal message
-submitForm.addEventListener("click", (e) => {
+submitForm.addEventListener('click', (e) => {
   e.preventDefault();
 
   emailValidation();
   phoneValidation();
 
   inputs.forEach((input) => {
-    if (input.value === "" || input.value == null) {
-      formError.innerText = "Favor de llenar todos los campos";
+    if (input.value === '' || input.value == null) {
+      formError.innerText = 'Favor de llenar todos los campos';
       return false;
     } else {
-      console.log("si funciono");
-      input.classList.add("success");
+      console.log('si funciono');
+      input.classList.add('success');
       return true;
     }
   });
 
   if (
-    formName.classList.contains("success") &&
-    formEmail.classList.contains("success") &&
-    formPhone.classList.contains("success") &&
-    formMessage.classList.contains("success")
+    formName.classList.contains('success') &&
+    formEmail.classList.contains('success') &&
+    formPhone.classList.contains('success') &&
+    formMessage.classList.contains('success')
   ) {
-    console.log("esto tambien funciono");
-    modal.classList.remove("hidden-modal");
+    console.log('esto tambien funciono');
+    modal.classList.remove('hidden-modal');
   }
 });
 
@@ -70,11 +70,11 @@ function emailValidation() {
     /^([\.\_a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,3}\.[a-zA-Z]{1,3}$/;
 
   if (regex.test(formEmail.value) || regexo.test(formEmail.value)) {
-    invalidEmail.innerText = "";
+    invalidEmail.innerText = '';
   } else {
-    invalidEmail.innerText = "Email inválido";
-    invalidEmail.classList.add("text-red-500");
-    formEmail.value = "";
+    invalidEmail.innerText = 'Email inválido';
+    invalidEmail.classList.add('text-red-500');
+    formEmail.value = '';
     return false;
   }
 }
@@ -83,11 +83,11 @@ function phoneValidation() {
   const regexn = /^[0-9]{10}$/;
 
   if (regexn.test(formPhone.value)) {
-    invalidPhone.innerText = "";
+    invalidPhone.innerText = '';
   } else {
-    invalidPhone.innerText = "Teléfono inválido";
-    invalidPhone.classList.add("text-red-500");
-    formPhone.value = "";
+    invalidPhone.innerText = 'Teléfono inválido';
+    invalidPhone.classList.add('text-red-500');
+    formPhone.value = '';
     return false;
   }
 }
