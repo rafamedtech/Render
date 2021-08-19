@@ -66,7 +66,7 @@ form.addEventListener('submit', (e) => {
     console.log('esto tambien funciono');
     modal.classList.remove('hidden-modal');
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then((response) => location.assign('/index.html'))
+      .then((response) => location.assign('/'))
       .catch((error) => console.error('Error!', error.message));
   }
 });
