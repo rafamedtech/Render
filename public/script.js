@@ -13,6 +13,10 @@ const inputs = document.querySelectorAll('.input-validation');
 const invalidEmail = document.querySelector('.invalid-email');
 const invalidPhone = document.querySelector('.invalid-phone');
 
+const scriptURL =
+  'https://script.google.com/macros/s/AKfycbxZBDBlx1_NR_u1daUZyw6LaFmuIA0sjlU9WYYOizKKlnGvA8xWcfsAbrkbVSqNSpTB5Q/exec';
+const form = document.forms['google-sheet'];
+
 const openNav = () => {
   nav.forEach((nav_el) => {
     nav_el.style.transform = 'translateX(0)';
@@ -36,7 +40,7 @@ if (document.documentElement.clientWidth < 768) {
 }
 
 //Modal message
-submitForm.addEventListener('click', (e) => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   emailValidation();
@@ -61,13 +65,15 @@ submitForm.addEventListener('click', (e) => {
   ) {
     console.log('esto tambien funciono');
     modal.classList.remove('hidden-modal');
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then((response) => location.assign('/'))
+      .catch((error) => console.error('Error!', error.message));
   }
 });
 
 function emailValidation() {
   const regex = /^([\.\_a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,8}$/;
-  const regexo =
-    /^([\.\_a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,3}\.[a-zA-Z]{1,3}$/;
+  const regexo = /^([\.\_a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,3}\.[a-zA-Z]{1,3}$/;
 
   if (regex.test(formEmail.value) || regexo.test(formEmail.value)) {
     invalidEmail.innerText = '';
@@ -93,15 +99,15 @@ function phoneValidation() {
 }
 
 // Send form to Google Sheets
-const scriptURL =
-  'https://script.google.com/macros/s/AKfycbxZBDBlx1_NR_u1daUZyw6LaFmuIA0sjlU9WYYOizKKlnGvA8xWcfsAbrkbVSqNSpTB5Q/exec';
-const form = document.forms['google-sheet'];
+// const scriptURL =
+//   'https://script.google.com/macros/s/AKfycbxZBDBlx1_NR_u1daUZyw6LaFmuIA0sjlU9WYYOizKKlnGvA8xWcfsAbrkbVSqNSpTB5Q/exec';
+// const form = document.forms['google-sheet'];
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-    .then((response) => location.assign('/'))
-    .catch((error) => console.error('Error!', error.message));
-});
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+//     .then((response) => location.assign('/'))
+//     .catch((error) => console.error('Error!', error.message));
+// });
 
 // .then((response) => alert('You have successfully submitted.'))
