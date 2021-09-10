@@ -68,8 +68,9 @@
 .portfolio-item {
   background-color: transparent;
   box-shadow: none;
-
   backdrop-filter: none;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 label {
