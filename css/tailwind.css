@@ -73,12 +73,8 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.form {
-  height: 90vh;
-}
-
 label {
-  @apply text-white my-4;
+  @apply text-white mb-4;
 }
 
 input {
@@ -283,7 +279,11 @@ input[type='number'] {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
+  .form {
+    height: 90vh;
+  }
+
   .list {
     padding: 0;
     padding-top: 10px;
