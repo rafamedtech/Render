@@ -98,6 +98,16 @@ function phoneValidation() {
   }
 }
 
+function captchaValidation() {
+  var recaptcha = document.forms['myForm']['g-recaptcha-response'];
+  recaptcha.required = true;
+  recaptcha.oninvalid = function (e) {
+    // do something
+    alert('Por favor completa el captcha para continuar');
+  };
+}
+
+captchaValidation();
 // Send form to Google Sheets
 // const scriptURL =
 //   'https://script.google.com/macros/s/AKfycbxZBDBlx1_NR_u1daUZyw6LaFmuIA0sjlU9WYYOizKKlnGvA8xWcfsAbrkbVSqNSpTB5Q/exec';
