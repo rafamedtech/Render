@@ -87,6 +87,18 @@ textarea:focus {
   outline: 0;
 }
 
+.podcast {
+  position: relative;
+}
+
+.podcast::after {
+  content: 'New';
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  color: #ef477a;
+}
+
 .services {
   transition: all 0.3s ease;
 }
