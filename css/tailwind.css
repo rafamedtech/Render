@@ -281,7 +281,7 @@ input[type='number'] {
 
 @media (min-width: 1024px) {
   .form {
-    height: 90vh;
+    height: 95vh;
   }
 
   .list {
