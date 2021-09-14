@@ -98,7 +98,7 @@ function phoneValidation() {
   }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   var recaptcha = document.forms['myForm']['g-recaptcha-response'];
   recaptcha.required = true;
   recaptcha.oninvalid = function (e) {
