@@ -13,9 +13,9 @@ const inputs = document.querySelectorAll('.input-validation');
 const invalidEmail = document.querySelector('.invalid-email');
 const invalidPhone = document.querySelector('.invalid-phone');
 
-const scriptURL =
-  'https://script.google.com/macros/s/AKfycbxZBDBlx1_NR_u1daUZyw6LaFmuIA0sjlU9WYYOizKKlnGvA8xWcfsAbrkbVSqNSpTB5Q/exec';
-const form = document.forms['google-sheet'];
+// const scriptURL =
+//   'https://script.google.com/macros/s/AKfycbxZBDBlx1_NR_u1daUZyw6LaFmuIA0sjlU9WYYOizKKlnGvA8xWcfsAbrkbVSqNSpTB5Q/exec';
+// const form = document.forms['google-sheet'];
 
 const openNav = () => {
   nav.forEach((nav_el) => {
