@@ -765,7 +765,7 @@
             id="form"
             class="flex flex-col m-4 lg:p-16 md:w-1/2 md:mr-8"
             method="POST"
-            name="google-sheet1"
+            name="myForm"
             action="https://api.sheetmonkey.io/form/8Z6dz3axr5dpZy3tgeVF6W"
           >
             <label for="name">Nombre Completo</label>
@@ -949,14 +949,14 @@
       });
     </script>
     <script>
-      // window.onload = function () {
-      //   var recaptcha = document.forms['myForm']['g-recaptcha-response'];
-      //   recaptcha.required = true;
-      //   recaptcha.oninvalid = function (e) {
-      //     // do something
-      //     alert('Por favor completa el captcha para continuar');
-      //   };
-      // };
+      window.onload = function () {
+        var recaptcha = document.forms['myForm']['g-recaptcha-response'];
+        recaptcha.required = true;
+        recaptcha.oninvalid = function (e) {
+          // do something
+          alert('Por favor completa el captcha para continuar');
+        };
+      };
     </script>
   </body>
 </html>
