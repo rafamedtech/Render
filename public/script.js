@@ -40,65 +40,63 @@ if (document.documentElement.clientWidth < 768) {
 }
 
 //Modal message
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault();
 
-  console.log('test');
+//   emailValidation();
+//   phoneValidation();
 
-  // emailValidation();
-  // phoneValidation();
+//   inputs.forEach((input) => {
+//     if (input.value === '' || input.value == null) {
+//       formError.innerText = 'Favor de llenar todos los campos';
+//       return false;
+//     } else {
+//       console.log('si funciono');
+//       input.classList.add('success');
+//       return true;
+//     }
+//   });
 
-  // inputs.forEach((input) => {
-  //   if (input.value === '' || input.value == null) {
-  //     formError.innerText = 'Favor de llenar todos los campos';
-  //     return false;
-  //   } else {
-  //     console.log('si funciono');
-  //     input.classList.add('success');
-  //     return true;
-  //   }
-  // });
+//   if (
+//     formName.classList.contains('success') &&
+//     formEmail.classList.contains('success') &&
+//     formPhone.classList.contains('success') &&
+//     formMessage.classList.contains('success')
+//   ) {
+//     console.log('esto tambien funciono');
+//     modal.classList.remove('hidden-modal');
+//     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+//       .then((response) => location.assign('/'))
+//       .catch((error) => console.error('Error!', error.message));
+//   }
+// });
 
-  // if (
-  //   formName.classList.contains('success') &&
-  //   formEmail.classList.contains('success') &&
-  //   formPhone.classList.contains('success') &&
-  //   formMessage.classList.contains('success')
-  // ) {
-  //   console.log('esto tambien funciono');
-  //   modal.classList.remove('hidden-modal');
-  //   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-  //     .then((response) => location.assign('/'))
-  //     .catch((error) => console.error('Error!', error.message));
-  // }
-});
+// function emailValidation() {
+//   const regex = /^([\.\_a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,8}$/;
+//   const regexo = /^([\.\_a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,3}\.[a-zA-Z]{1,3}$/;
 
-function emailValidation() {
-  const regex = /^([\.\_a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,8}$/;
-  const regexo = /^([\.\_a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,3}\.[a-zA-Z]{1,3}$/;
+//   if (regex.test(formEmail.value) || regexo.test(formEmail.value)) {
+//     invalidEmail.innerText = '';
+//   } else {
+//     invalidEmail.innerText = 'Email inválido';
+//     invalidEmail.classList.add('text-red-500');
+//     formEmail.value = '';
+//     return false;
+//   }
+// }
 
-  if (regex.test(formEmail.value) || regexo.test(formEmail.value)) {
-    invalidEmail.innerText = '';
-  } else {
-    invalidEmail.innerText = 'Email inválido';
-    invalidEmail.classList.add('text-red-500');
-    formEmail.value = '';
-    return false;
-  }
-}
+// function phoneValidation() {
+//   const regexn = /^[0-9]{10}$/;
 
-function phoneValidation() {
-  const regexn = /^[0-9]{10}$/;
-
-  if (regexn.test(formPhone.value)) {
-    invalidPhone.innerText = '';
-  } else {
-    invalidPhone.innerText = 'Teléfono inválido';
-    invalidPhone.classList.add('text-red-500');
-    formPhone.value = '';
-    return false;
-  }
-}
+//   if (regexn.test(formPhone.value)) {
+//     invalidPhone.innerText = '';
+//   } else {
+//     invalidPhone.innerText = 'Teléfono inválido';
+//     invalidPhone.classList.add('text-red-500');
+//     formPhone.value = '';
+//     return false;
+//   }
+// }
 
 // Send form to Google Sheets
 // const scriptURL =
