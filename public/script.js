@@ -43,6 +43,8 @@ if (document.documentElement.clientWidth < 768) {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
+  console.log('test');
+
   // emailValidation();
   // phoneValidation();
 
