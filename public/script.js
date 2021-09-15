@@ -43,32 +43,32 @@ if (document.documentElement.clientWidth < 768) {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  emailValidation();
-  phoneValidation();
+  // emailValidation();
+  // phoneValidation();
 
-  inputs.forEach((input) => {
-    if (input.value === '' || input.value == null) {
-      formError.innerText = 'Favor de llenar todos los campos';
-      return false;
-    } else {
-      console.log('si funciono');
-      input.classList.add('success');
-      return true;
-    }
-  });
+  // inputs.forEach((input) => {
+  //   if (input.value === '' || input.value == null) {
+  //     formError.innerText = 'Favor de llenar todos los campos';
+  //     return false;
+  //   } else {
+  //     console.log('si funciono');
+  //     input.classList.add('success');
+  //     return true;
+  //   }
+  // });
 
-  if (
-    formName.classList.contains('success') &&
-    formEmail.classList.contains('success') &&
-    formPhone.classList.contains('success') &&
-    formMessage.classList.contains('success')
-  ) {
-    console.log('esto tambien funciono');
-    modal.classList.remove('hidden-modal');
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then((response) => location.assign('/'))
-      .catch((error) => console.error('Error!', error.message));
-  }
+  // if (
+  //   formName.classList.contains('success') &&
+  //   formEmail.classList.contains('success') &&
+  //   formPhone.classList.contains('success') &&
+  //   formMessage.classList.contains('success')
+  // ) {
+  //   console.log('esto tambien funciono');
+  //   modal.classList.remove('hidden-modal');
+  //   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+  //     .then((response) => location.assign('/'))
+  //     .catch((error) => console.error('Error!', error.message));
+  // }
 });
 
 function emailValidation() {
